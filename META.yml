@@ -17,4 +17,6 @@ requires:
   Exporter: 0
   strict: 0
   warnings: 0
-version: 0.01
+resources:
+  repository: git://github.com/neilbowers/https://github.com/neilbowers/Module-Path.git
+version: 0.02
