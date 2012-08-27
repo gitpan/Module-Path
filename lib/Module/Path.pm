@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Module::Path;
 {
-  $Module::Path::VERSION = '0.02';
+  $Module::Path::VERSION = '0.03';
 }
 # ABSTRACT: get the full path to a locally installed module
 
@@ -14,12 +14,12 @@ our @EXPORT_OK = qw(module_path);
 my $SEPARATOR;
 
 BEGIN {
-    if ($^O =~ /^(MSWin|dos|os2)/i) {
+    if ($^O =~ /^(dos|os2)/i) {
         $SEPARATOR = '\\';
     } elsif ($^O =~ /^MacOS/i) {
         $SEPARATOR = ':';
     } else {
-        $SEPARATOR  = '/';
+        $SEPARATOR = '/';
     }
 }
 
