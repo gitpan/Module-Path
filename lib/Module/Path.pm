@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Module::Path;
 {
-  $Module::Path::VERSION = '0.03';
+  $Module::Path::VERSION = '0.04';
 }
 # ABSTRACT: get the full path to a locally installed module
 
