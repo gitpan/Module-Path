@@ -4,7 +4,9 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+bin/mpath
 dist.ini
 lib/Module/Path.pm
 t/01-require.t
 t/02-module-path.t
+t/03-mpath.t

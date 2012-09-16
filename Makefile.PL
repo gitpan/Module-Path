@@ -18,7 +18,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Module-Path",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/mpath"
+  ],
   "LICENSE" => "perl",
   "NAME" => "Module::Path",
   "PREREQ_PM" => {
@@ -26,7 +28,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.04_1",
   "test" => {
     "TESTS" => "t/*.t"
   }
