@@ -3,6 +3,8 @@ abstract: 'get the full path to a locally installed module'
 author:
   - 'Neil Bowers <neil@bowers.com>'
 build_requires:
+  File::Spec: 0
+  FindBin: 0
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -20,4 +22,4 @@ requires:
 resources:
   bugtracker: https://github.com/neilbowers/Module-Path/issues
   repository: git://github.com/neilbowers/Module-Path.git
-version: 0.04_1
+version: 0.04_2
