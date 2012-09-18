@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Module::Path;
 {
-  $Module::Path::VERSION = '0.04_3';
+  $Module::Path::VERSION = '0.05';
 }
 # ABSTRACT: get the full path to a locally installed module
 
@@ -96,6 +96,11 @@ If no file was found, return C<undef>.
 I wrote this module because I couldn't find an alternative
 which dealt with the points listed above, and didn't pull in
 what seemed like too many dependencies to me.
+
+The distribution for C<Module::Path> includes the C<mpath>
+script, which lets you get the path for a module from the command-line:
+
+ % mpath Module::Path
 
 =head1 BUGS
 
