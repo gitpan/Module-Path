@@ -19,7 +19,7 @@ my $path;
 # this test. So the path to strict may be different. So we use $^X to run
 # mpath with the same perl binary being used to run this test.
 #
-chomp($path = `"$^X" $MPATH strict 2>&1`);
+chomp($path = `"$^X" "$MPATH" strict 2>&1`);
 
 # This test does "use strict", so %INC should include the path where
 # strict.pm was found, and module_path should find the same
@@ -32,6 +32,6 @@ ok($? == 0 && defined($path) && $path eq $INC{'strict.pm'},
 };
 
 # module_path() returns undef if module not found in @INC
-chomp($path = `"$^X" $MPATH No::Such::Module 2>&1`);
+chomp($path = `"$^X" "$MPATH" No::Such::Module 2>&1`);
 ok($? != 0 && defined($path) && $path eq 'No::Such::Module not found',
    "non-existent module should result in failure");
