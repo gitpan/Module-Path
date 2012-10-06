@@ -3,13 +3,14 @@ abstract: 'get the full path to a locally installed module'
 author:
   - 'Neil Bowers <neil@bowers.com>'
 build_requires:
+  Devel::FindPerl: 0
   File::Spec::Functions: 0
-  FindBin: 0
+  FindBin: 0.05
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300023, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300024, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -22,4 +23,4 @@ requires:
 resources:
   bugtracker: https://github.com/neilbowers/Module-Path/issues
   repository: git://github.com/neilbowers/Module-Path.git
-version: 0.07_1
+version: 0.07_2

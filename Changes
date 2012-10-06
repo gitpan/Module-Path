@@ -1,5 +1,8 @@
 Revision history for perl module Module::Path
 
+0.07_2 2012-10-06
+    - t/03-mpath.t: trying out Devel::FindPerl instead of $^X
+
 0.07_1 2012-09-26
     - should be quoting the path to the mpath binary in t/03-mpath.t
       Graham Knop (haarg)

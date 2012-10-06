@@ -12,8 +12,9 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "get the full path to a locally installed module",
   "AUTHOR" => "Neil Bowers <neil\@bowers.com>",
   "BUILD_REQUIRES" => {
+    "Devel::FindPerl" => 0,
     "File::Spec::Functions" => 0,
-    "FindBin" => 0,
+    "FindBin" => "0.05",
     "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
@@ -30,7 +31,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.07_1",
+  "VERSION" => "0.07_2",
   "test" => {
     "TESTS" => "t/*.t"
   }
