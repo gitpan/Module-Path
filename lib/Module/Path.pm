@@ -1,10 +1,12 @@
-use strict;
-use warnings;
 package Module::Path;
 {
-  $Module::Path::VERSION = '0.09';
+  $Module::Path::VERSION = '0.09_01';
 }
 # ABSTRACT: get the full path to a locally installed module
+
+use strict;
+use warnings;
+use File::Basename 'dirname';
 
 require Exporter;
 
@@ -36,6 +38,16 @@ sub module_path
         # see 'perldoc -f require' on why you might find
         # a reference in @INC
         next if ref($dir);
+
+        # If $dir is a symlink, then we resolve it.
+        # Returing a full path containing a symlinked directory can
+        # cause problems: https://github.com/neilbowers/Module-Path/issues/4
+        if (-l $dir) {
+            my $linkdir = readlink($dir);
+            $dir = index($linkdir, $SEPARATOR) == 0
+                   ? $linkdir
+                   : dirname($dir).$SEPARATOR.$linkdir;
+        }
 
         $fullpath = $dir.$SEPARATOR.$relpath;
         return $fullpath if -f $fullpath;
@@ -87,6 +99,11 @@ that you might find references in C<@INC>).
 For each directory in C<@INC>, append the partial path (C<Foo/Bar.pm>),
 again using the correct directory path separator.
 If the resulting file exists, return this path.
+
+=item
+
+If a directory in C<@INC> is a symlink, then we resolve the path,
+and return a path containing the linked-to directory.
 
 =item
 

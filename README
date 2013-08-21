@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution Module-Path,
-version 0.09:
+version 0.09_01:
 
   get the full path to a locally installed module
 
-This software is copyright (c) 2012 by Neil Bowers.
+This software is copyright (c) 2013 by Neil Bowers.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
