@@ -1,4 +1,9 @@
-Revision history for perl module Module::Path
+Revision history for Perl module Module::Path
+
+0.10_01 2014-02-16
+    - Testsuite now uses Cwd::abs_path() on paths from %INC,
+      to cope with synlinks in @INC directories.
+      This was causing test failures on Debian(-based) systems.
 
 0.10 2014-02-04
     - mpath can display paths for multiple modules (Ahmad Syaltut)
