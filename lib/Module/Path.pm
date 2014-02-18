@@ -1,6 +1,6 @@
 package Module::Path;
 # ABSTRACT: get the full path to a locally installed module
-$Module::Path::VERSION = '0.11_01';
+$Module::Path::VERSION = '0.11_02';
 use 5.006;
 use strict;
 use warnings;
@@ -33,6 +33,7 @@ sub module_path
     ($relpath = $module) =~ s/::/$SEPARATOR/g;
     $relpath .= '.pm' unless $relpath =~ m!\.pm$!;
 
+    DIRECTORY:
     foreach my $dir (@INC) {
         # see 'perldoc -f require' on why you might find
         # a reference in @INC
@@ -44,6 +45,7 @@ sub module_path
         # where the final directory in the path was a symlink,
         # now we're trying to deal with symlinks anywhere in the path.
         $dir = abs_path($dir);
+        next DIRECTORY unless defined($dir);
 
         $fullpath = $dir.$SEPARATOR.$relpath;
         return $fullpath if -f $fullpath;

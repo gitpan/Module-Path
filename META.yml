@@ -28,4 +28,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/Module-Path
   repository: https://github.com/neilbowers/Module-Path.git
-version: 0.11_01
+version: 0.11_02
