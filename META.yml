@@ -3,7 +3,6 @@ abstract: 'get the full path to a locally installed module'
 author:
   - 'Neil Bowers <neil@bowers.com>'
 build_requires:
-  Cwd: 0
   Devel::FindPerl: 0
   File::Spec::Functions: 0
   FindBin: 0.05
@@ -18,6 +17,7 @@ meta-spec:
   version: 1.4
 name: Module-Path
 requires:
+  Cwd: 0
   Exporter: 0
   File::Basename: 0
   Getopt::Long: 0
@@ -28,4 +28,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/Module-Path
   repository: https://github.com/neilbowers/Module-Path.git
-version: 0.11
+version: 0.11_01

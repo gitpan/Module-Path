@@ -23,6 +23,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Module::Path",
   "PREREQ_PM" => {
+    "Cwd" => 0,
     "Exporter" => 0,
     "File::Basename" => 0,
     "Getopt::Long" => 0,
@@ -31,13 +32,12 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "Cwd" => 0,
     "Devel::FindPerl" => 0,
     "File::Spec::Functions" => 0,
     "FindBin" => "0.05",
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.11",
+  "VERSION" => "0.11_01",
   "test" => {
     "TESTS" => "t/*.t"
   }
