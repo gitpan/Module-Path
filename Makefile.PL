@@ -37,7 +37,7 @@ my %WriteMakefileArgs = (
     "FindBin" => "0.05",
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.12",
+  "VERSION" => "0.13",
   "test" => {
     "TESTS" => "t/*.t"
   }
