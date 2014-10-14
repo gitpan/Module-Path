@@ -11,7 +11,7 @@ use ExtUtils::MakeMaker ;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "get the full path to a locally installed module",
-  "AUTHOR" => "Neil Bowers <neil\@bowers.com>",
+  "AUTHOR" => "Neil Bowers <neilb\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
@@ -36,7 +36,7 @@ my %WriteMakefileArgs = (
     "FindBin" => "0.05",
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.14",
+  "VERSION" => "0.15",
   "test" => {
     "TESTS" => "t/*.t"
   }

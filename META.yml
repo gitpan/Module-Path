@@ -1,7 +1,7 @@
 ---
 abstract: 'get the full path to a locally installed module'
 author:
-  - 'Neil Bowers <neil@bowers.com>'
+  - 'Neil Bowers <neilb@cpan.org>'
 build_requires:
   Devel::FindPerl: '0'
   File::Spec::Functions: '0'
@@ -28,4 +28,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/Module-Path
   repository: https://github.com/neilbowers/Module-Path.git
-version: '0.14'
+version: '0.15'
