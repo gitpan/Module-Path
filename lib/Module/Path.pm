@@ -1,6 +1,6 @@
 package Module::Path;
 # ABSTRACT: get the full path to a locally installed module
-$Module::Path::VERSION = '0.15';
+$Module::Path::VERSION = '0.16';
 use 5.006;
 use strict;
 use warnings;
