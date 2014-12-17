@@ -1,6 +1,6 @@
 package Module::Path;
 # ABSTRACT: get the full path to a locally installed module
-$Module::Path::VERSION = '0.16';
+$Module::Path::VERSION = '0.17';
 use 5.006;
 use strict;
 use warnings;
@@ -40,6 +40,8 @@ sub module_path
         # see 'perldoc -f require' on why you might find
         # a reference in @INC
         next DIRECTORY if ref($dir);
+
+        next unless -d $dir && -r $dir;
 
         # The directory path might have a symlink somewhere in it,
         # so we get an absolute path (ie resolve any symlinks).
